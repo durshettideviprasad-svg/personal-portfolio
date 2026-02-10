@@ -144,39 +144,28 @@
         @media (max-width: 768px) {
 
             nav {
+                padding: 16px 20px;
                 flex-direction: column;
-                gap: 15px;
-                padding: 20px;
+                gap: 12px;
+            }
+
+            nav h3 {
+                font-size: 22px;
+                color: #b45309;
             }
 
             .nav-links {
                 display: grid;
-                grid-template-columns: repeat(3, auto);
-                gap: 12px 20px;
-                justify-content: center;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px 18px;
+                text-align: center;
+                width: 100%;
             }
 
             nav a {
                 margin-left: 0;
                 font-size: 15px;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .hero-image img {
-                width: 180px;
-                height: 180px;
-            }
-
-            .card {
-                padding: 35px 25px;
+                padding: 4px 0;
             }
         }
     </style>
