@@ -89,23 +89,6 @@
             border-radius: 50%;
         }
 
-        @media (max-width: 768px) {
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-image img {
-                width: 180px;
-                height: 180px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin-top: 20px;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            }
-        }
-
 
         section h2 {
             margin-bottom: 20px;
@@ -135,14 +118,24 @@
 
         @media (max-width: 768px) {
 
+            .nav-links {
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                gap: 12px 20px;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin-left: 0;
+                font-size: 15px;
+            }
+
+
             nav {
                 flex-direction: column;
                 gap: 15px;
                 padding: 20px;
-            }
-
-            .nav-links {
-                margin-left: 0;
             }
 
             .hero {
