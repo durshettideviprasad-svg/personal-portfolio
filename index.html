@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deviprasad</title>
+    <title>Deviprasad | Portfolio</title>
+
     <style>
         * {
             margin: 0;
@@ -20,18 +21,26 @@
             color: #1f2937;
         }
 
+        section {
+            scroll-margin-top: 120px;
+        }
+
         .header {
+            background: #f9fafb;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav {
-            background: #f9fafb;
             display: flex;
             align-items: center;
             padding: 25px 60px;
         }
 
         nav h3 {
+            color: #b45309;
             font-weight: 700;
         }
 
@@ -66,8 +75,8 @@
 
         .hero {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             gap: 60px;
         }
 
@@ -75,9 +84,15 @@
             max-width: 550px;
         }
 
+        .hero-text p {
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
         .hero h1 {
             font-size: 48px;
             line-height: 1.2;
+            margin-top: 10px;
         }
 
         .hero span {
@@ -86,51 +101,55 @@
 
         .hero-image img {
             width: 280px;
+            height: 280px;
+            object-fit: cover;
             border-radius: 50%;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
 
-
         section h2 {
-            margin-bottom: 20px;
             font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
+            gap: 20px;
         }
 
         .box {
             background: #f9fafb;
             padding: 25px;
-            margin: 10px;
             border-radius: 14px;
             text-align: center;
             font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border: 2px solid #b45309;
         }
 
         .contact p {
             font-size: 18px;
-            /* padding: 5px; */
-            margin: 10px;
+            margin: 10px 0;
         }
 
         @media (max-width: 768px) {
-
-            .nav-links {
-                display: grid;
-                grid-template-columns: repeat(3, auto);
-                gap: 12px 20px;
-                justify-content: center;
-                margin-top: 10px;
-            }
-
-            nav a {
-                margin-left: 0;
-                font-size: 15px;
-            }
-
 
             nav {
                 flex-direction: column;
@@ -138,8 +157,20 @@
                 padding: 20px;
             }
 
+            .nav-links {
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                gap: 12px 20px;
+                justify-content: center;
+            }
+
+            nav a {
+                margin-left: 0;
+                font-size: 15px;
+            }
+
             .hero {
-                grid-template-columns: 1fr;
+                flex-direction: column;
                 text-align: center;
             }
 
@@ -147,13 +178,9 @@
                 font-size: 34px;
             }
 
-            .hero img {
+            .hero-image img {
                 width: 180px;
                 height: 180px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin: auto;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             }
 
             .card {
@@ -167,7 +194,7 @@
 
 <div class="header">
     <nav>
-        <h3>Deviprasad</h3>
+        <h3 style="color: b45309;">Deviprasad</h3>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -183,10 +210,9 @@
 
 <section id="home" class="card hero">
     <div class="hero-text">
-        <p>WELCOME TO MY HOME!</p>
+        <p>WELCOME TO MY HOME</p>
         <h1>I'm <span>Durshetti Deviprasad</span></h1>
     </div>
-
     <div class="hero-image">
         <img src="Profile.jpeg" alt="Deviprasad">
     </div>
@@ -194,10 +220,9 @@
 
 <section id="about" class="card">
     <h2>About Me</h2>
-    <hr>
-    <ul style="padding: 10px;">
+    <ul>
         <li>I am an engineering student who enjoys coding and building digital experiences.</li>
-        <li>I work with Python, C, HTML, and CSS.</li>
+        <li>I work with Python, C, Java, HTML, and CSS.</li>
         <li>I value spirituality for clarity, balance, and discipline.</li>
         <li>I enjoy drawing and self-reflection.</li>
     </ul>
@@ -205,7 +230,6 @@
 
 <section id="skills" class="card">
     <h2>Skills</h2>
-    <hr>
     <div class="grid">
         <div class="box">Python</div>
         <div class="box">C Programming</div>
@@ -217,27 +241,24 @@
 
 <section id="projects" class="card">
     <h2>Projects</h2>
-    <hr>
     <div class="grid">
         <div class="box">Food Ordering System</div>
         <div class="box">Smart Hospital Records Management System</div>
-        <div class="box">AirWave Console - Flight Ticket Booking System</div>
-        <div class="box">Sill Graph Intelligence Platform</div>
+        <div class="box">AirWave Console – Flight Ticket Booking</div>
+        <div class="box">Skill Graph Intelligence Platform</div>
     </div>
 </section>
 
 <section id="achievements" class="card">
     <h2>Achievements</h2>
-    <hr>
     <div class="grid">
-        <div class="box">Prapancha Telugu Mahasabha - Poems</div>
+        <div class="box">Prapancha Telugu Mahasabha – Poetry</div>
         <div class="box">Built Multiple Academic Projects</div>
     </div>
 </section>
 
 <section id="contact" class="card contact">
     <h2>Contact</h2>
-    <hr>
     <p>Email: durshettideviprasad@gmail.com</p>
     <p>Phone: 8074312791</p>
 </section>
